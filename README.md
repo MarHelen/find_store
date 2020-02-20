@@ -39,7 +39,7 @@ python3 find_store/store/main.py --zip=94158 --units=km
   --units=(mi|km)        Display units in miles or kilometers [default: mi]
   --output=(text|json)   Output in human-readable text, or in JSON (e.g. machine-readable) [default: text]
 ```
- Example
+ Example 1
 ```bash
   find_store --zip=94158 --units=km
 ```
@@ -49,6 +49,16 @@ python3 find_store/store/main.py --zip=94158 --units=km
  	store name: San Francisco Central, 
  	store address: SEC 4th & Mission St 789 Mission St San Francisco CA 94103-3132, 			
  	distance from requested address: 1.815950km
+```
+
+Example 2
+```bash
+  find_store --address=94158 --output="json"
+```
+
+Output
+```bash
+	{"store_name": "San Francisco Central", "store_location": "SEC 4th & Mission St", "address": "789 Mission St", "city": "San Francisco", "state": "CA", "zip_code": "94103-3132", "latitude": "37.7847358", "longitude": "-122.4036914", "county": "San Francisco County", "distance": 1.1283786342129303, "units": "mi"}
 ```
 
 # Details
