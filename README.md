@@ -10,6 +10,17 @@ Use the package manager [pip](https://pip.pypa.io/en/stable/) to install Find St
 pip install git+https://github.com/MarHelen/find_store.git
 
 ```
+or...
+```bash
+sudo pip3 install git+https://github.com/MarHelen/find_store.git
+
+```
+Otherwise you can also make repository clone and install or run it from the local copy.
+```bash
+git clone https://github.com/MarHelen/find_store.git
+pip install -U googlemaps
+python3 find_store/store/main.py --zip=94158 --units=km
+```
 
 ## Usage
 
@@ -40,7 +51,7 @@ pip install git+https://github.com/MarHelen/find_store.git
  	distance from requested address: 1.815950km
 ```
 
-## Details
+# Details
 
 The implementation is pretty much strainforward. Every time when a new address or zipcode is being requsted the algorithm is looking through all the stores in the data storage and call ```calc_distance(...)``` function to retrieve the exact distance beetween two pairs of coordinates. Eventually the main function return closest store details with this minimum distance. 
 
@@ -48,7 +59,7 @@ For the location trasformation Google Maps Geolocation API used, - python3 packa
 
 For the distance calculation uses [haversine formula](https://www.movable-type.co.uk/scripts/latlong.html)
 
-## Testing
+# Testing
 
 To cover the main functionality, added unit tests for ```search_store()``` and ```calc_distance()``` with mocking calls to Google API.
 
