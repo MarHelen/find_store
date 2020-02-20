@@ -7,7 +7,8 @@ Find Store is a python package for searching the closest store from the data sto
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install Find Store.
 
 ```bash
-pip install <path>
+pip install git+https://github.com/MarHelen/find_store.git
+
 ```
 
 ## Usage
